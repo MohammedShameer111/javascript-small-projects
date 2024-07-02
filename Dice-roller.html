@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+</head>
+<body>
+  <div class="container">
+    <h1>Dice Roller</h1>
+    <label>dice -></label>
+    <input type="number" id="numberdice" value="1" min="1">
+    <button onclick="rolldice()">Roll Dice</button>
+    <div id="diceresult"></div>
+    <div id="diceimage"></div>
+    
+  </div>
+  <script>
+    function rolldice(){
+      const numberdice=document.getElementById("numberdice");
+      const diceresult=document.getElementsById("diceresult");
+      const diceimage=document.getElementsById("diceimage");
+      const values=[];
+      const images=[];
+
+      for(let i=0;i<numberdice;i++){
+        const value=Math.floor(Math.random() * 6)+1;
+        values.push(value);
+        images.push(`<img src="images/${value}.png">`);
+        
+
+      }
+      diceresult.textcontent=`dice: ${values.join(`,`)}`;
+      diceimage.innerHTML=images.join('');
+
+    }
+  </script>
+  
+</body>
+</html>

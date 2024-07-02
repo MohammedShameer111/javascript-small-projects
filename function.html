@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+
+  <script>
+    class animal{
+      constructor(name,age){
+        this.name=name;
+        this.age=age;
+      }
+      move(speed){
+        console.log(` the ${this.name} move at ${speed}km`);
+      }
+    }
+    class rabbit extends animal{
+      constructor(name,age,runspeed){
+        super(name,age);
+        this.runspeed=runspeed;
+      }
+      run(){
+        console.log(`this ${this.name} can run`);
+        super.move(this.runspeed);
+      }
+    }
+    class fish extends animal{
+      constructor(name,age,swimspeed){
+        super(name,age);
+        this.swimspeed=swimspeed;
+      }
+      swim(){
+        console.log(`this ${this.name} can swim`);
+        super.move(this.swimspeed);
+      }
+    }
+    const rabbit1=new rabbit("rabbit",22,250);
+    rabbit1.run(); 
+
+
+  </script>
+  <script>
+  // class user{
+  //   static usercount=0;
+  //   constructor(username){
+  //     this.username=username;
+  //     user.usercount++;
+  //   }
+  //   static getusercount(){
+  //     console.log(`the user count is ${user.usercount}`);
+  //   }
+  //   sayhello(){
+  //     console.log(`helo,username is ${this.username}`);
+  //   }
+
+
+  // }
+
+  // const user1=new user('sameer');
+  // user1.sayhello();
+  // user.getusercount();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <script>
+    const salestax=0.05;
+    class product{
+      constructor(name,price){
+        this.name=name;
+        this.price=price;
+      }
+      displayproduct(){
+        console.log(`product:${this.name}`);
+        console.log(`price:${this.price}`);
+      }
+      calculate(salestax){
+        return this.price+(this.price * salestax);
+      }
+    }
+    const product1=new product("sameer",93);
+    product1.displayproduct();
+    const total=product1.calculate(salestax.toFixed(2));
+    console.log(`${total}`);
+  </script> -->
+
+  
+</body>
+</html>
